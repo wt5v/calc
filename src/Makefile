@@ -15,12 +15,17 @@ multiply.o: multiply.cc
 
 divide.o: divide.cc
 
+dist: calc
+	mv *.a ../lib
+	mv calc ../bin
+	$(RM) *.o
+
 .PHONY: clean
 
 clean:
-	$(RM) *.o *.core *.out *.orig
+	$(RM) ../lib/*.o *.core *.out *.orig
 
 distclean: clean
-	$(RM) *.a calc
+	$(RM) ../lib/*.a ../bin/calc
 
 
