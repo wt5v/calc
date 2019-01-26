@@ -23,9 +23,9 @@ dist: calc
 .PHONY: clean
 
 clean:
-	$(RM) ../lib/*.o *.core *.out *.orig
+	$(RM) *.o *.core *.out *.orig *.a calc
 
-distclean: clean
-	$(RM) ../lib/*.a ../bin/calc
+distclean:
+	$(RM) ../lib/*.o ../lib/*.a ../bin/calc
 
 
